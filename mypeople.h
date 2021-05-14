@@ -20,7 +20,7 @@ private slots:
 
     void on_pb_lista_clicked();
 
-    void on_pushButton_clicked();
+    void on_pb_limpar_clicked();
 
 private:
     Ui::MyPeople *ui;

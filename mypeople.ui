@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>394</width>
-    <height>169</height>
+    <width>400</width>
+    <height>200</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>200</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -23,21 +35,109 @@
    <property name="styleSheet">
     <string notr="true">background-color: rgb(238, 238, 238);</string>
    </property>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>351</width>
-      <height>61</height>
+      <x>10</x>
+      <y>10</y>
+      <width>191</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>&lt;h3 style=&quot;color: #6dc4dc&quot;&gt;Controle de Convidados&lt;/h3&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;style type=&quot;text/css&quot;&gt;
+    #c3{
+       font-family: Matura MT Script Capitals;
+       font-size: 16pt;
+       color: #ff6d18;
+    }
+    #by{
+        font-family: Bauhaus 93;
+        font-size: 12pt;
+        color: #ff6d18;
+    }
+&lt;/style&gt;
+
+&lt;p id=&quot;c3&quot;&gt;&lt;i&gt;c3&lt;/i&gt;&lt;/p&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>382</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>382</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>382</width>
+      <height>55</height>
+     </size>
     </property>
     <layout class="QFormLayout" name="formLayout">
      <property name="verticalSpacing">
       <number>17</number>
      </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>37</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>37</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;p&gt;&lt;b&gt;Nome:&lt;/b&gt;&lt;/p&gt;</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="le_nome">
+       <property name="minimumSize">
+        <size>
+         <width>259</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>259</width>
+         <height>18</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #FFF;
 border: 0.5px solid #959595;
@@ -47,6 +147,18 @@ border-radius:7;</string>
      </item>
      <item row="1" column="1">
       <widget class="QLineEdit" name="le_chegada">
+       <property name="minimumSize">
+        <size>
+         <width>259</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>259</width>
+         <height>18</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #FFF;
 border: 0.5px solid #959595;
@@ -54,21 +166,20 @@ border-radius:7;</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Nome:</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="minimumSize">
+        <size>
+         <width>115</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>115</width>
+         <height>18</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>Arial</family>
@@ -76,22 +187,35 @@ border-radius:7;</string>
         </font>
        </property>
        <property name="text">
-        <string>Horário de Chegada:</string>
+        <string>&lt;p&gt;&lt;b&gt;Horário de Chegada:&lt;/b&gt;&lt;/p&gt;</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>100</y>
-      <width>292</width>
-      <height>33</height>
+      <x>9</x>
+      <y>120</y>
+      <width>382</width>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item>
       <widget class="QPushButton" name="pb_cadastrar">
        <property name="minimumSize">
@@ -99,6 +223,12 @@ border-radius:7;</string>
          <width>68</width>
          <height>31</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">border: 1px solid #959595;
@@ -117,6 +247,12 @@ background-color: rgb(230, 232, 232);</string>
          <height>31</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">border: 1px solid #959595;
 background-color: rgb(230, 232, 232);</string>
@@ -127,12 +263,18 @@ background-color: rgb(230, 232, 232);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pb_limpar">
        <property name="minimumSize">
         <size>
          <width>68</width>
          <height>31</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">border: 1px solid #959595;
@@ -151,6 +293,12 @@ background-color: rgb(230, 232, 232);</string>
          <height>31</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">border: 1px solid #959595;
 background-color: rgb(230, 232, 232);</string>
@@ -160,6 +308,19 @@ background-color: rgb(230, 232, 232);</string>
        </property>
       </widget>
      </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -168,7 +329,7 @@ background-color: rgb(230, 232, 232);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>394</width>
+     <width>400</width>
      <height>22</height>
     </rect>
    </property>
@@ -183,8 +344,8 @@ background-color: rgb(230, 232, 232);</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>341</x>
-     <y>140</y>
+     <x>344</x>
+     <y>182</y>
     </hint>
     <hint type="destinationlabel">
      <x>373</x>

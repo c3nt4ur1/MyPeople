@@ -22,29 +22,32 @@ int i = 0;
 
 void MyPeople::on_pb_cadastrar_clicked()
 {
-    nomes[i] = ui->le_nome->text();
-    horarios_de_chegada[i] = ui->le_chegada->text();
-    ui->le_nome->clear();
-    ui->le_chegada->clear();
-    i++;
+    if(ui->le_nome->text().toStdString() != ""){
+        nomes[i] = ui->le_nome->text();
+        horarios_de_chegada[i] = ui->le_chegada->text();
+        ui->le_nome->clear();
+        ui->le_chegada->clear();
+        i++;
+    }
 }
 
 void MyPeople::on_pb_lista_clicked()
 {
     QString outputs;
     if(i == 0){
-        outputs = "Ninguém chegou ainda :(";
+        QMessageBox::information(this, "Convidados", "Ninguém chegou ainda  :(");
     }else{
         outputs = "NOME | HORÁRIO DE CHEGADA\n___________________________________\n";
         for(int j = 0; j < i; j++){
             outputs += nomes[j] + " | " + horarios_de_chegada[j] + "\n";
         }
+        outputs += "\n                                                 "; //Organiza o tamanho da caixa
+        QMessageBox::about(this, "Pessoas", outputs);
     }
-    outputs += "\n                                                 "; //Organiza o tamanho da caixa
-    QMessageBox::about(this, "Pessoas", outputs);
+
 }
 
-void MyPeople::on_pushButton_clicked()
+void MyPeople::on_pb_limpar_clicked()
 {
     QMessageBox::StandardButton deletar = QMessageBox::question(this, "Limpar lista", "Deletar todos os dados?");
     if(deletar == QMessageBox::Yes){
@@ -58,6 +61,4 @@ void MyPeople::on_pushButton_clicked()
         }
     }
 }
-
-
 
