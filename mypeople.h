@@ -17,6 +17,9 @@ public:
     mypeople(QWidget *parent = nullptr);
     ~mypeople();
 
+private slots:
+    void on_pb_exit_clicked();
+
 private:
     Ui::mypeople *ui;
 };

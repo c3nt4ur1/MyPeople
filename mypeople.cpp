@@ -15,3 +15,9 @@ mypeople::~mypeople()
     delete ui;
 }
 
+
+void mypeople::on_pb_exit_clicked()
+{
+    close();
+}
+
