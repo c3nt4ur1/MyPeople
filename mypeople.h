@@ -1,3 +1,5 @@
+//  Copyright 2021 c3nt4ur1 (Adriano Naime Bonin)
+
 #ifndef MYPEOPLE_H
 #define MYPEOPLE_H
 
