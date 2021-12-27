@@ -41,7 +41,7 @@ void MyPeople::on_pb_lista_clicked()
         for(int j = 0; j < i; j++){
             outputs += nomes[j] + " | " + horarios_de_chegada[j] + "\n";
         }
-        outputs += "\n                                                 "; //Organiza o tamanho da caixa
+        outputs += "\n"                                                 "; //Organiza o tamanho da caixa
         QMessageBox::about(this, "Pessoas", outputs);
     }
 
