@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <QMessageBox>
 #include "mypeople.h"
 #include "./ui_mypeople.h"
 using namespace std;
@@ -38,7 +39,7 @@ void mypeople::on_pb_exit_clicked()
 void mypeople::on_pb_add_clicked()
 {
     names.push_back(ui->le_name->text());
-    arrival_hour.push_back(QString::number(ui->te_arrival->time().hour()) + QString::number(ui->te_arrival->time().minute()));
+    arrival_hour.push_back(QString::number(ui->te_arrival->time().hour()) + ":" + QString::number(ui->te_arrival->time().minute()));
     ++total_guests;
 
     QTime midnight(00, 00);
@@ -50,6 +51,16 @@ void mypeople::on_pb_add_clicked()
 
 void mypeople::on_pb_preview_clicked()
 {
+    QString qsOutput = "NAME  |  ARRIVAL TIME " ;
 
+    vector<QString>::iterator it1 = names.begin();
+    vector<QString>::iterator it2 = arrival_hour.begin();
+
+    vector<string> qsNames;
+    vector<string> qsArrivals;
+
+    for(; it1 != names.end(); it1++, it2++){
+
+    }
 }
 
