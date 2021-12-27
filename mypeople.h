@@ -20,6 +20,10 @@ public:
 private slots:
     void on_pb_exit_clicked();
 
+    void on_pb_add_clicked();
+
+    void on_pb_preview_clicked();
+
 private:
     Ui::mypeople *ui;
 };

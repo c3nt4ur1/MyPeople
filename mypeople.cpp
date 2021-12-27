@@ -11,8 +11,8 @@ using namespace std;
 
 static const char* initial_time;
 
-vector<QString> names;
-vector<QString> arrival_hour;
+vector<string> names;
+vector<string> arrival_hour;
 static int total_guests = 0;
 
 mypeople::mypeople(QWidget *parent)
@@ -38,29 +38,37 @@ void mypeople::on_pb_exit_clicked()
 
 void mypeople::on_pb_add_clicked()
 {
-    names.push_back(ui->le_name->text());
-    arrival_hour.push_back(QString::number(ui->te_arrival->time().hour()) + ":" + QString::number(ui->te_arrival->time().minute()));
-    ++total_guests;
+    if(!(ui->le_name->text().isEmpty())){
 
-    QTime midnight(00, 00);
+        names.push_back(ui->le_name->text().toStdString());
+        QString qsArrival = ui->te_arrival->time().toString();
+        arrival_hour.push_back(qsArrival.toStdString());
+        ++total_guests;
 
-    ui->le_name->clear();
-    ui->te_arrival->setTime(midnight);
+        QTime midnight(00, 00);
+
+        ui->le_name->clear();
+        ui->te_arrival->setTime(midnight);
+    }
 }
+
 
 
 void mypeople::on_pb_preview_clicked()
 {
-    QString qsOutput = "NAME  |  ARRIVAL TIME " ;
 
-    vector<QString>::iterator it1 = names.begin();
-    vector<QString>::iterator it2 = arrival_hour.begin();
+    string output = "NAME  |  ARRIVAL TIME   <br>_______________________<br>";
 
-    vector<string> qsNames;
-    vector<string> qsArrivals;
 
-    for(; it1 != names.end(); it1++, it2++){
+    vector<string>::iterator it1 = names.begin();
+    vector<string>::iterator it2 = arrival_hour.begin();
 
+    for(int i = 0; it1 != names.end(); it1++, it2++, i++){
+        output += *it1 + "  |  " + *it2 + "<br>";
     }
+
+    output += "<br>";
+
+    QMessageBox::about(this, "Guests", QString::fromStdString(output));
 }
 
