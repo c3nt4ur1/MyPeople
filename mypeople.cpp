@@ -41,6 +41,10 @@ void mypeople::on_pb_add_clicked()
     arrival_hour.push_back(QString::number(ui->te_arrival->time().hour()) + QString::number(ui->te_arrival->time().minute()));
     ++total_guests;
 
+    QTime midnight(00, 00);
+
+    ui->le_name->clear();
+    ui->te_arrival->setTime(midnight);
 }
 
 
