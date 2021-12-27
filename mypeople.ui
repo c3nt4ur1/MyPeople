@@ -19,7 +19,7 @@
      <rect>
       <x>41</x>
       <y>31</y>
-      <width>45</width>
+      <width>61</width>
       <height>21</height>
      </rect>
     </property>
@@ -36,7 +36,7 @@
    <widget class="QLineEdit" name="le_name">
     <property name="geometry">
      <rect>
-      <x>101</x>
+      <x>120</x>
       <y>31</y>
       <width>271</width>
       <height>21</height>
@@ -59,8 +59,8 @@
     <property name="geometry">
      <rect>
       <x>41</x>
-      <y>66</y>
-      <width>53</width>
+      <y>56</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
@@ -77,9 +77,9 @@
    <widget class="QTimeEdit" name="te_arrival">
     <property name="geometry">
      <rect>
-      <x>101</x>
-      <y>66</y>
-      <width>131</width>
+      <x>120</x>
+      <y>60</y>
+      <width>130</width>
       <height>21</height>
      </rect>
     </property>
@@ -179,7 +179,7 @@
      <x>0</x>
      <y>0</y>
      <width>489</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
