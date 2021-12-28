@@ -24,7 +24,15 @@ private slots:
 
     void on_pb_preview_clicked();
 
+    void on_pb_clear_clicked();
+
+    void on_pb_end_clicked();
+
 private:
     Ui::mypeople *ui;
 };
 #endif // MYPEOPLE_H
+
+
+vector<string> names;
+vector<string> arrival_hour;
