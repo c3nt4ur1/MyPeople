@@ -55,8 +55,7 @@ void mypeople::on_pb_add_clicked()
 
 
 void mypeople::on_pb_preview_clicked()
-{
-
+{    
     string output = "NAME  |  ARRIVAL TIME   <br>_______________________<br>";
 
 
@@ -70,5 +69,24 @@ void mypeople::on_pb_preview_clicked()
     output += "<br>";
 
     QMessageBox::about(this, "Guests", QString::fromStdString(output));
+}
+
+
+void mypeople::on_pb_clear_clicked()
+{
+    //Will erase the content of the names vector
+    QMessageBox::StandardButton clear = QMessageBox::question(this, "", "Delete register?");
+
+    if(clear == QMessageBox::Yes){
+        vector<string>::iterator it1 = names.begin();
+        for (; it1 != names.end(); it1++){
+            *it1 = false;
+        }
+
+        it1 = arrival_hour.begin();
+        for(; it1 != arrival_hour.end(); it1++){
+            *it1 = false;
+        }
+    }
 }
 
