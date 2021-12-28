@@ -8,11 +8,9 @@
 #include "./ui_mypeople.h"
 using namespace std;
 
-
-static const char* initial_time;
-
 vector<string> names;
 vector<string> arrival_hour;
+static const char* initial_time;
 static int total_guests = 0;
 
 mypeople::mypeople(QWidget *parent)
@@ -90,3 +88,25 @@ void mypeople::on_pb_clear_clicked()
     }
 }
 
+void mypeople::on_pb_end_clicked(){
+    if(total_guests){
+        ofstream target;
+
+        target.open("Guests.txt", ios::app);
+
+        target << "NAME   |     " << endl;
+
+        vector<string>::iterator it1 = names.begin();
+        vector<string>::iterator it2 = arrival_hour.begin();
+
+        for(; it1 != names.end(); it1++, it2++){
+            target << *it1 << "    |    " << *it2 << endl;
+        }
+
+        target.close();
+
+        QMessageBox::information(this, "", "Guests logged successfully!");
+    }else{
+        QMessageBox::warning(this, "", "No guests registered yet");
+    }
+}
